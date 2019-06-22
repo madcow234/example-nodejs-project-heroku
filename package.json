@@ -1,0 +1,46 @@
+{
+  "name": "example-nodejs-project-heroku",
+  "version": "1.0.0",
+  "description": "Upgraded version of \"example-nodejs-project\" prepared for Heroku deployment.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "build": "babel src -d dist",
+    "start": "node dist/index.js",
+    "dev-start": "npm run build && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MadCow234/example-nodejs-project-heroku.git"
+  },
+  "keywords": [
+    "nodejs",
+    "framework",
+    "heroku"
+  ],
+  "author": "MadCow234",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MadCow234/example-nodejs-project-heroku/issues"
+  },
+  "homepage": "https://github.com/MadCow234/example-nodejs-project-heroku#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/register": "^7.4.4",
+    "dotenv": "^8.0.0",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^5.0.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "mocha": "^6.1.4",
+    "prettier": "1.18.2"
+  },
+  "dependencies": {
+    "winston": "^3.2.1"
+  }
+}
