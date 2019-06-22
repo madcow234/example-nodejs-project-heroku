@@ -26,7 +26,12 @@ const loggerFormat = callerFilename => {
 
 module.exports = callerFilename => {
   if (process.env.NODE_ENV === "production") {
-    // TODO: Create the logger required for the production environment
+    // Heroku streaming logs are sourced from STDOUT
+    // Print all log levels to console
+    return createLogger({
+      format: loggerFormat(callerFilename),
+      transports: [new transports.Console()]
+    });
   } else if (process.env.NODE_ENV === "development") {
     // Print warnings and errors to console
     // Print all log levels to a file named "combined.log"
